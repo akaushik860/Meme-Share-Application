@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <ImageView
+        android:id="@+id/memeshareimage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@id/ShareButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/colorPrimary"
+
+        app:layout_constraintTop_toTopOf="@id/editText"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@id/memeshareimage"
+        app:layout_constraintBottom_toBottomOf="@id/memeshareimage"
+        app:layout_constraintLeft_toLeftOf="@id/memeshareimage"
+        app:layout_constraintRight_toRightOf="@id/memeshareimage"></ProgressBar>
+
+
+    <Button
+        android:id="@+id/ShareButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:padding="25dp"
+        android:textColor="@color/text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/ShareButton"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        android:onClick="clickshare"
+        app:layout_constraintLeft_toLeftOf="parent"></Button>
+
+    <Button
+        android:id="@+id/NextButton"
+        android:layout_width="0dp"
+        android:background="@color/NextButton"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:onClick="clicknext"
+        android:padding="25dp"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"></Button>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Meme Share App"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/memeshareimage"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        android:textColor="@color/text"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="38dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
